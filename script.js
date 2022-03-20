@@ -26,6 +26,8 @@ function activePlayer(){
         players[1].classList.toggle('player--active');
 }
 
+
+// Roll the dice and add point to current stage
 btnRoll.addEventListener('click', function(){
     if(isPlaying){
         dice.classList.remove('hidden');
@@ -43,6 +45,8 @@ btnRoll.addEventListener('click', function(){
     }
 });
 
+
+// add  the currernt point to the main score
 btnHold.addEventListener('click', function(){
     if(isPlaying){
         let totallCurrent = parseInt(document.getElementById(`current--${currentItem}`).textContent);
@@ -67,7 +71,7 @@ btnHold.addEventListener('click', function(){
     }
 });
 
-
+// Reste the game or refresh the game
 btnNew.addEventListener('click', function(){
 
     initValue();
